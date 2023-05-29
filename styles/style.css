@@ -1,0 +1,235 @@
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+*/
+
+:root {
+    --main-text: #343a40;
+    --secondary-text: #868e96;
+    --main-color: #3b5bdb;
+    --secondary-color: #364fc7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    color: var(--main-text);
+}
+
+h2 {
+    font-size: 52px;
+    letter-spacing: -0.5px;
+    margin-bottom: 16px;
+}
+
+h3 {
+    font-size: 36px;
+    letter-spacing: -0.25px;
+}
+
+header {
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--main-text);
+}
+
+nav ul li a:hover {
+    color: var(--secondary-text);
+}
+
+section {
+    margin-bottom: 96px !important;
+}
+
+footer {
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(45deg, #3b5bdb, #364fc7);
+    padding: 32px;
+}
+
+footer img {
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+footer small {
+    display: block;
+}
+
+svg {
+    transition: transform 0.2s ease-in;
+}
+
+.header-content {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.download-button {
+    padding: 12px;
+    border-radius: 2000px;
+    background-color: var(--main-color);
+    font-weight: 700;
+    color: #fff;
+    border: none;
+}
+
+.download-button:hover {
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.brand-logo {
+    fill: var(--main-color);
+}
+
+.brand-title {
+    color: var(--main-color);
+    font-size: 24px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.call-to-action {
+    width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.slogan-container {
+    align-self: center;
+}
+
+.slogan-container span {
+    color: var(--main-color);
+}
+
+.slogan-title {
+    font-size: 62px;
+    margin-bottom: 16px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.slogan-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.cellphone-mockup {
+    width: 529px;
+    height: 748px;
+}
+
+.download-app-img {
+    width: 162px;
+    height: 48px;
+    margin-right: 16px;
+}
+
+.features-section {
+    padding: 32px;
+    display: flex;
+    background: linear-gradient(45deg, #3b5bdb, #364fc7);
+    height: 650px;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 160px !important;
+}
+
+.features-section p {
+    line-height: 1.5;
+}
+
+.grid-3-col {
+    margin-top: 128px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+}
+
+.features-container {
+    width: 1000px;
+    align-self: center;
+}
+
+.features-title {
+    margin-top: 16px;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.faq-section-title {
+    text-align: center;
+    margin-bottom: 96px;
+}
+
+.faq-container {
+    margin: auto;
+    margin-top: 32px;
+    padding-bottom: 16px;
+    max-width: 700px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--secondary-text);
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 8px 0px;
+}
+
+.faq-answer {
+    font-size: 18px;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    margin-top: 16px;
+}
+
+.faq-container.active .faq-answer {
+    max-height: 300px;
+}
+
+.faq-container.active svg {
+    transform: rotate(180deg);
+}
