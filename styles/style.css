@@ -12,6 +12,7 @@ FONT SIZE SYSTEM (px)
     --secondary-text: #868e96;
     --main-color: #3b5bdb;
     --secondary-color: #364fc7;
+    --background-color: #f8f9fa;
 }
 
 * {
@@ -23,6 +24,7 @@ FONT SIZE SYSTEM (px)
 body {
     font-family: "Lato", sans-serif;
     color: var(--main-text);
+    background-color: var(--background-color);
 }
 
 h2 {
@@ -37,13 +39,12 @@ h3 {
 }
 
 header {
-    background-color: #fff;
+    background-color: var(--background-color);
     width: 100%;
     display: flex;
     justify-content: space-around;
     padding: 12px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -83,6 +84,12 @@ footer small {
 
 svg {
     transition: transform 0.2s ease-in;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .header-content {
@@ -232,4 +239,28 @@ svg {
 
 .faq-container.active svg {
     transform: rotate(180deg);
+}
+
+@media (max-width: 1220px) {
+    .call-to-action {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slogan-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+    }
+
+    .features-section {
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
